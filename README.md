@@ -24,6 +24,7 @@ With CommandDispatcher you would create a first cli script and add the
 following code to it:
 
 `mygemscript`
+
     $scriptPath = File.expand_path(File.dirname(__FILE__))
     $scriptName = File.basename(__FILE__)
     $command = ARGV.shift
