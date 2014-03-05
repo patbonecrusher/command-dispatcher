@@ -24,19 +24,19 @@ With CommandDispatcher you would create a first cli script and add the
 following code to it:
 
 `mygemscript`
-`$scriptPath = File.expand_path(File.dirname(__FILE__))
-$scriptName = File.basename(__FILE__)
-$command = ARGV.shift
-dispatcher = CommandDispatcher::Dispatcher.new( $scriptPath, $scriptName )
+    $scriptPath = File.expand_path(File.dirname(__FILE__))
+    $scriptName = File.basename(__FILE__)
+    $command = ARGV.shift
+    dispatcher = CommandDispatcher::Dispatcher.new( $scriptPath, $scriptName )
 
-begin
-  dispatcher.dispatchCommand($command, *ARGV)
-rescue ArgumentError => ex
-  $stderr.puts "Error: " + ex.to_s + ".  Please specify a valid command."
-  dispatcher.usage
-  exit -1
-ensure
-end`
+    begin
+        dispatcher.dispatchCommand($command, *ARGV)
+    rescue ArgumentError => ex
+        $stderr.puts "Error: " + ex.to_s + ".  Please specify a valid command."
+        dispatcher.usage
+        exit -1
+    ensure
+    end
 
 Then for each command, you would create a specific ruby script file name like:
 `mygemscript-commanda`
