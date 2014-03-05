@@ -1,6 +1,6 @@
 # Command::Dispatcher
 
-TODO: Write a gem description
+[![Code Climate](https://codeclimate.com/github/patbonecrusher/command-dispatcher.png)](https://codeclimate.com/github/patbonecrusher/command-dispatcher)
 
 ## Installation
 
@@ -46,7 +46,6 @@ Then for each command, you would create a specific ruby script file name like:
 
 Such that when invoking `mygemscript commanda` would resolve in calling `mygemscript-commanda`
 
-TODO: Write usage instructions here
 
 ## Contributing
 
