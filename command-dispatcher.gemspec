@@ -1,12 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'command/dispatcher/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "command-dispatcher"
-  spec.version       = Command::Dispatcher::VERSION
-  spec.authors       = ["Bone Crusher"]
+  spec.version       = File.read('VERSION')
+  spec.authors       = ["Pat Laplante"]
   spec.email         = ["pat@covenofchaos.com"]
   spec.description   = %q{Help with dispatching specific functionality to other ruby scripts.  mybinscript init would call 'mybinscript-init'}
   spec.summary       = %q{}
